@@ -15,7 +15,14 @@ def main():
 
         choice = input("Wybierz opcje menu")
 
-        if choice =="0":
+        if choice ="0":
             break
-        if choice =="1":
+        if choice ="1":
             get_user_info(users)
+
+
+
+
+
+        if _name_ = "_main_":
+            main()
