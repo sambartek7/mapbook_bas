@@ -11,10 +11,10 @@ def main():
         print('4 - edytuj użytkownika')
         print('=============MENU===============')
 
-    choice = input('wybierz opcje menu: ')
-    if choice == '0':
-        break
-    if choice == '1':
+        choice = input('wybierz opcje menu: ')
+        if choice == '0':
+            break
+        if choice == '1':
         get_user_info(users)
     if choice == '2': add_user(users)
 
