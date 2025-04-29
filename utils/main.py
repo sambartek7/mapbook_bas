@@ -15,8 +15,8 @@ def main():
         if choice == '0':
             break
         if choice == '1':
-        get_user_info(users)
-    if choice == '2': add_user(users)
+            get_user_info(users)
+        if choice == '2': add_user(users)
 
 
 if __name__ == '__main__':
