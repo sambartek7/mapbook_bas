@@ -1,6 +1,6 @@
 from tkinter import *
 
-
+import tkintermapview
 
 root = Tk()
 
@@ -10,11 +10,12 @@ root.geometry('1200x700')
 ramka_lista_obiektow = Frame(root)
 ramka_formularz = Frame(root)
 ramka_szczegoly_obiektow = Frame(root)
+ramka_mapa = Frame(root)
 
 ramka_lista_obiektow.grid(row=0, column=0, padx=50)
 ramka_formularz.grid(row=0, column=1)
 ramka_szczegoly_obiektow.grid(row=1, column=0)
-
+ramka_mapa.grid(row=2, column=0, columnspan=2)
 #ramka_lista_obiektow
 
 label_lista_obiektow = Label(ramka_lista_obiektow, text='Lista znajomych')
@@ -72,11 +73,33 @@ label_szczegoly_obiektu.grid(row=0, column=0)
 label_imie_szczegoly_obiektu = Label(ramka_szczegoly_obiektow, text='Imie:')
 label_imie_szczegoly_obiektu.grid(row=1, column=0)
 
+label_imie_szczegoly_obiektu_wartosc = Label(ramka_szczegoly_obiektow, text='.....')
+label_imie_szczegoly_obiektu_wartosc.grid(row=1, column=1)
 
+label_nazwisko_szczegoly_obiektu = Label(ramka_szczegoly_obiektow, text='Nazwisko:')
+label_nazwisko_szczegoly_obiektu.grid(row=1, column=2)
 
+label_nazwisko_szczegoly_obiektu_wartosc = Label(ramka_szczegoly_obiektow, text='.....')
+label_nazwisko_szczegoly_obiektu_wartosc.grid(row=1, column=3)
 
+label_miejscowosc_szczegoly_obiektu_wartosc=Label(ramka_szczegoly_obiektow, text='Miejscowość')
+label_miejscowosc_szczegoly_obiektu_wartosc.grid(row=1, column=4)
 
+label_miejscowosc_szczegoly_obiektu_wartosc=Label(ramka_szczegoly_obiektow, text='.....')
+label_miejscowosc_szczegoly_obiektu_wartosc.grid(row=1, column=5)
 
+label_posty_szczegoly_obiektu_wartosc=Label(ramka_szczegoly_obiektow, text='Postów')
+label_posty_szczegoly_obiektu_wartosc.grid(row=1, column=6)
+
+label_posty_szczegoly_obiektu_wartosc=Label(ramka_szczegoly_obiektow, text='.....')
+label_posty_szczegoly_obiektu_wartosc.grid(row=1, column=7)
+
+#ramka_mapa
+
+map_widget=tkintermapview.TkinterMapView(ramka_mapa, width=800, height=600)
+map_widget.grid(row=0, column=0, columnspan=2)
+map_widget.set_position(52.23, 21.00)
+map_widget.set_zoom(6)
 
 
 
